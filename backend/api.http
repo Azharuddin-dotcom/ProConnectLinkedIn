@@ -1,0 +1,114 @@
+POST http://localhost:9090/register HTTP/1.1
+content-Type: application/json
+
+{
+    "username": "demo",
+    "password": "demo",
+    "email": "demo@gmail.com",
+    "name": "demo"
+}
+
+###
+
+POST http://localhost:9090/register HTTP/1.1
+content-Type: application/json
+
+{
+    "username": "demo1",
+    "password": "demo1",
+    "email": "demo1@gmail.com",
+    "name": "demo1"
+}
+
+###
+
+POST http://localhost:9090/login HTTP/1.1
+content-Type: application/json
+
+{
+    "email": "demo@gmail.com",
+    "password": "demo"
+}
+
+
+###
+
+POST http://localhost:9090/login HTTP/1.1
+content-Type: application/json
+
+{
+    "email": "demo1@gmail.com",
+    "password": "demo1"
+}
+
+
+###
+
+GET http://localhost:9090/get_user_and_profile HTTP/1.1
+content-Type: application/json
+
+{
+  "token": "fc3e9a748c042626ced4038d973550b550d07d3ee71f1b905e30f46472c6fffe"
+}
+
+
+###
+
+GET http://localhost:9090/get_user_and_profile HTTP/1.1
+content-Type: application/json
+
+
+{
+  "token": "ef52bce724ca84b1de50d78bb6d338a7247a52590243eae42b8827e905e604d3"
+}
+
+
+###
+
+POST http://localhost:9090/update_profile_data HTTP/1.1
+content-Type: application/json
+
+{
+  "token": "fc3e9a748c042626ced4038d973550b550d07d3ee71f1b905e30f46472c6fffe",
+  "bio": "This is a demo bio",
+  "currentPost": "CTO",
+  "pastWork": [
+    {
+      "company": "Microsoft",
+      "position": "CTO",
+      "years": "2+"
+    }
+  ],
+  "education": [
+    {
+      "school": "IIT",
+      "degree": "B.Tech",
+      "fieldOfStudy": "2015-2019"
+    }
+  ]
+}
+###
+
+POST http://localhost:9090/update_profile_data HTTP/1.1
+content-Type: application/json
+
+{
+  "token": "ef52bce724ca84b1de50d78bb6d338a7247a52590243eae42b8827e905e604d3",
+  "bio": "This is a demo1 bio",
+  "currentPost": "Software Engineer",
+  "pastWork": [
+    {
+      "company": "Google",
+      "position": "CTO",
+      "years": "2+"
+    }
+  ],
+  "education": [
+    {
+      "school": "IIT",
+      "degree": "B.Tech",
+      "fieldOfStudy": "2016-2020"
+    }
+  ]
+}
+
