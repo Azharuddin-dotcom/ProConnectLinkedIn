@@ -145,6 +145,23 @@ export default function ViewProfilePage({ userProfile }) {
                     </div>
                 </div>
 
+                <div className={styles.workHistory}>
+                    <h4>Education</h4>
+
+                    <div className={styles.workHistoryContainer}>
+                        {
+                          userProfile.education.map((education, index) => {
+                            return (
+                              <div key={index} className={styles.workHistoryCard}>
+                                  <p style={{ fontWeight: "bold", display: "flex", alignItems: "center", gap: "0.8rem" }}>{education.school} - {education.degree}</p>
+                                  <p>{education.fieldOfStudy}</p>
+                              </div>
+                            )
+                          })
+                        }
+                    </div>
+                </div>
+
             </div>
         </DashboardLayout>
     </UserLayout>

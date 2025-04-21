@@ -4,7 +4,6 @@ import DashboardLayout from "@/layout/DashboardLayout";
 import { useDispatch, useSelector } from "react-redux";
 import { useEffect } from "react";
 import { getAllUsers } from "@/config/redux/action/authAction";
-import { getAllPosts } from '@/config/redux/action/postAction';
 import styles from "./index.module.css";
 import { BASE_URL } from '@/config/index.jsx';
 import { useRouter } from 'next/router';
